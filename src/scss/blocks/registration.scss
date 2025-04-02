@@ -1,0 +1,130 @@
+.modal {
+    width: 380px;
+    min-height: 270px;
+    background-color: #206e9a;
+    padding: 20px 0;
+    box-shadow: inset 15px -20px 40px rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    transition: opacity 0.5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    &__show {
+        visibility: visible;
+        opacity: 1;
+
+    }
+    &__choose {
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__form {
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 90%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(5, 50px);
+        row-gap: 15px;
+        input {
+            border-radius: 5px;
+            border: none;
+            padding: 0px 10px;
+        }
+        input::placeholder {
+            color: grey;
+            font-size: 18px;
+        }
+        &-login {
+            grid-template-rows: repeat(2, 50px);
+        }
+    }
+
+
+
+    &__btn {
+        background-color: #5fb029;
+        color: #fff;
+        width: 180px;
+        font-size: 16px;
+        margin: 0 auto;
+        &-registration {
+            width: 220px;
+        }
+    }
+
+  
+    &__btn:active {
+        font-size: 14px;
+    }
+    &__close {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        cursor: pointer;
+        z-index: 2;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 0;
+            width: 25px;
+            height: 2px;
+            background-color: #fff;
+            transform: rotate(45deg);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            right: 0;
+            width: 25px;
+            height: 2px;
+            background-color: #fff;
+            transform: rotate(-45deg);
+
+        }
+    }
+
+    &__registration {
+        display: none;
+        transition: all 0.5s;
+        &-active {
+            display: block;
+        }
+    }
+
+    &__choose {
+        font-size: 26px;
+    }
+
+
+
+    &__login-title {
+        cursor: pointer;
+    }
+    &__register-title {
+        cursor: pointer;
+    }
+    &__login-title-active,
+    &__register-title-active {
+        text-decoration: underline;
+        text-underline-offset: 7px;
+    }
+    &__login-wrapper {
+        display: none;
+        &-active {
+            display: block;
+
+        }
+    }
+}
