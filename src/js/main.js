@@ -9,10 +9,15 @@ const modal__login_content = document.querySelector('.modal__login-wrapper');
 const modal__registration_content = document.querySelector('.modal__registration');
 const modal__login_toggle = document.querySelector('.modal__login-title');
 const modal__registration_toggle = document.querySelector('.modal__register-title');
-modal__inputs = document.querySelectorAll('.modal__input');
+import courses from "./modules/courses";
+const modal__inputs = document.querySelectorAll('.modal__input');
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+
+
+   
 promo__btn.addEventListener('click', (e) => {
     e.preventDefault();
     openModal();
@@ -76,3 +81,9 @@ modal__registration_toggle.addEventListener('click', () => {
 modal__login_toggle.addEventListener('click', () => {
     showLoginContent();
 })
+
+
+
+});
+
+

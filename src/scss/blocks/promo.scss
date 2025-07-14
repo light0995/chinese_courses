@@ -1,28 +1,23 @@
+.promo {
+    background: linear-gradient(to right, rgb(141,112,255) 90%, rgb(141,112,255));
 
+}
 .promo__description {
     &-text {
-        font-size: 28px;
+        font-size: 36px;
     }
     &-levels {
         margin-top: 20px;
         list-style-type: none;
-        font-size: 26px;
+        font-size: 32px;
         position: relative;
     }
     &-level {
         position: relative;
         padding-left: 20px;
         margin-top: 10px;
-        &:before {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            left: -40px;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 100%;
-            background-color: #eaea00;
+        &::before {
+            @include before-circle;
         }
         &-line {
             position: absolute;
@@ -39,11 +34,11 @@
 
 
 .btn {
-    width: 250px;
-    height: 50px;
+    width: 350px;
+    height: 70px;
     background-color: #eaea00;
     border: none;
-    font-size: 20px;
+    font-size: 26px;
     text-transform: uppercase;
     color: #000;
     margin-top: 20px;
@@ -57,7 +52,7 @@
 }
 
 .promo__img-wrapper {
-    width: 480px;
+    width: 620px;
     position: absolute;
     right: 120px;
     bottom: 0;
@@ -75,5 +70,4 @@
 
 .promo__content {
     display: flex;
-    padding: 20px 100px;
 }
