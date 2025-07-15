@@ -1,45 +1,46 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .container {
-    width: 100%;
-    min-height: 100vh;
-    padding: 10px 140px;
-    position: relative;
+  // max-width: 1500px;
+  min-height: 100vh;
+  position: relative;
+  // margin: 0 auto;
+  padding: 20px 140px;
 }
 
-
-
 .title {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 .btn {
-    border-radius: 20px;
+  border-radius: 20px;
 }
-
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    background-color: #fff;
-    z-index: 3;
-    opacity: 0.5;
-    display: none;
-    &__show {
-        display: block;
-    }
-
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  z-index: 3;
+  opacity: 0.5;
+  display: none;
+  &__show {
+    display: block;
+  }
 }
 
-@import './mixin.scss/mixin.scss';
-@import './blocks/promo.scss';
-@import './blocks/header.scss';
-@import './blocks/registration.scss';
-@import './blocks/sidepanel.scss';
-@import './blocks//productCards.scss';
-@import './blocks/courseDetails.scss';
-@import './media.scss'
+@import "./mixin.scss/mixin.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/header.scss";
+@import "./blocks/registration.scss";
+@import "./blocks/sidepanel.scss";
+@import "./blocks//productCards.scss";
+@import "./blocks/courseDetails.scss";
+@import "./media.scss";

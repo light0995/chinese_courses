@@ -1,73 +1,98 @@
 .promo {
-    background: linear-gradient(to right, rgb(141,112,255) 90%, rgb(141,112,255));
-
+  background: linear-gradient(
+    to right,
+    rgb(141, 112, 255) 90%,
+    rgb(141, 112, 255)
+  );
 }
+
+.header__menu-items {
+  list-style-type: none;
+  display: flex;
+  /* max-width: 520px; */
+  justify-content: space-between;
+}
+
+.header__menu-item {
+    display: flex;
+    margin-right: 150px;
+
+    a {
+        color: #fff;
+        color: #000;
+        font-size: 22px;
+        text-decoration: none;
+    }
+}
+
+.header__menu-item a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
 .promo__description {
-    &-text {
-        font-size: 36px;
+  &-text {
+    font-size: 36px;
+  }
+  &-levels {
+    margin-top: 20px;
+    list-style-type: none;
+    font-size: 32px;
+    position: relative;
+  }
+  &-level {
+    position: relative;
+    padding-left: 20px;
+    margin-top: 10px;
+    &::before {
+      @include before-circle;
     }
-    &-levels {
-        margin-top: 20px;
-        list-style-type: none;
-        font-size: 32px;
-        position: relative;
+    &-line {
+      position: absolute;
+      width: 40px;
+      height: 0.5px;
+      background-color: #000;
+      left: -20px;
+      top: 50%;
     }
-    &-level {
-        position: relative;
-        padding-left: 20px;
-        margin-top: 10px;
-        &::before {
-            @include before-circle;
-        }
-        &-line {
-            position: absolute;
-            width: 40px;
-            height: 0.5px;
-            background-color: #000;
-            left: -20px;
-            top: 50%;
-
-        }
-    }
+  }
 }
-
-
 
 .btn {
-    width: 350px;
-    height: 70px;
-    background-color: #eaea00;
-    border: none;
-    font-size: 26px;
-    text-transform: uppercase;
-    color: #000;
-    margin-top: 20px;
-    cursor: pointer;
-    &:hover {
-        background-color: #7be33a;
-    }
-    &:active {
-        font-size: 18px;
-    }
+  width: 350px;
+  height: 70px;
+  background-color: #eaea00;
+  border: none;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #000;
+  margin-top: 20px;
+  cursor: pointer;
+  &:hover {
+    background-color: #7be33a;
+  }
+  &:active {
+    font-size: 18px;
+  }
 }
 
 .promo__img-wrapper {
-    width: 620px;
+  width: 620px;
+  position: absolute;
+  right: 120px;
+  bottom: 0;
+  img {
+    width: 100%;
     position: absolute;
-    right: 120px;
     bottom: 0;
-    img {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-    }
+  }
 }
 
 .promo__left {
-    margin-top: 40px;
-    color: #fff;
+  margin-top: 40px;
+  color: #fff;
 }
 
 .promo__content {
-    display: flex;
+  display: flex;
 }
