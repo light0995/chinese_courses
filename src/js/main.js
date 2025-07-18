@@ -3,13 +3,12 @@ const overlay = document.querySelector('.overlay');
 const modal__close = document.querySelector('.modal__close');
 const registration__btn = document.querySelector('.registration__btn');
 const promo__btn = document.querySelector('.promo__description-btn');
-const header__login = document.querySelector('.header__login');
+const header__login = document.querySelectorAll('.header__login');
 const body = document.querySelector('body');
 const modal__login_content = document.querySelector('.modal__login-wrapper');
 const modal__registration_content = document.querySelector('.modal__registration');
 const modal__login_toggle = document.querySelector('.modal__login-title');
 const modal__registration_toggle = document.querySelector('.modal__register-title');
-import courses from "./modules/courses";
 const modal__inputs = document.querySelectorAll('.modal__input');
 
 
@@ -35,6 +34,10 @@ body.addEventListener('keydown', (e) => {
     }
 });
 
+
+
+
+
 overlay.addEventListener('click', () => {
     closeModal();
 })
@@ -52,9 +55,9 @@ function closeModal () {
 }
 
 
-header__login.addEventListener('click', () => {
+header__login.forEach(item => item.addEventListener('click', () => {
     openModal();
-});
+}));
 
 function toggleModalContent (showElement, addClass, hideElement, removeClass) {
     showElement.classList.add(addClass);

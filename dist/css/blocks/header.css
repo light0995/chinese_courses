@@ -5,6 +5,30 @@
   width: 100%;
 }
 
+.header__menu-items {
+  list-style-type: none;
+  display: flex;
+  /* max-width: 520px; */
+  justify-content: space-between;
+}
+
+.header__menu-item {
+  display: flex;
+  margin-right: 150px;
+}
+.header__menu-item a {
+  color: #fff;
+  color: #000;
+  font-size: 17px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header__menu-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
 .header__wrapper {
   padding: 0 20px;
   display: flex;
