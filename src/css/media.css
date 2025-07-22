@@ -234,6 +234,9 @@
   }
 }
 @media (max-width: 576px) {
+  .container {
+    padding: 10px 30px;
+  }
   .modal {
     max-width: 250px;
   }
@@ -241,6 +244,46 @@
     display: none;
   }
   .sidepanel {
+    display: none;
+  }
+  .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .promo__description-text {
+    margin-top: 5px;
+    line-height: 26px;
+  }
+  .promo__img-wrapper {
+    display: none;
+  }
+  .promo__description-level {
+    font-size: 18px;
+  }
+  .promo__description-level::before {
+    width: 15px;
+    height: 15px;
+  }
+  .promo__description-level-line {
+    left: -24px;
+    width: 28px;
+  }
+  .promo__description-btn {
+    margin-top: 10px;
+    width: 180px;
+    height: 45px;
+    font-size: 15px;
+  }
+  .product__cards-title {
+    font-size: 23px;
+  }
+  .product__cards-items {
+    margin-top: 15px;
+  }
+  .hamburger__toggle {
+    display: block;
+  }
+  .hamburger__toggle-hide {
     display: none;
   }
 }

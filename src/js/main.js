@@ -10,7 +10,9 @@ const modal__registration_content = document.querySelector('.modal__registration
 const modal__login_toggle = document.querySelector('.modal__login-title');
 const modal__registration_toggle = document.querySelector('.modal__register-title');
 const modal__inputs = document.querySelectorAll('.modal__input');
-
+const hamburger = document.querySelector('.hamburger');
+const hamburger__toggle = document.querySelector('.hamburger__toggle');
+const close__btn = document.querySelector('.close__btn');
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,9 +35,6 @@ body.addEventListener('keydown', (e) => {
         closeModal();
     }
 });
-
-
-
 
 
 overlay.addEventListener('click', () => {
@@ -86,6 +85,24 @@ modal__login_toggle.addEventListener('click', () => {
 })
 
 
+function hamburgerToggle () {
+    hamburger__toggle.addEventListener('click', (e) => {
+        hamburger.classList.add('hamburger__active');
+        hamburger__toggle.classList.add ('hamburger__toggle-hide');
+    });
+}
+
+function closeHamburger () {
+    close__btn.addEventListener('click', (e) => {
+        hamburger__toggle.classList.remove('hamburger__toggle-hide');
+        hamburger.classList.remove('hamburger__active');
+
+    });
+}
+
+
+hamburgerToggle();
+closeHamburger();
 
 });
 

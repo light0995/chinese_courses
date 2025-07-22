@@ -1,10 +1,32 @@
 .hamburger {
-  padding: 10px 20px;
-  width: 150px;
+  padding: 5px 20px;
+  width: 200px;
   height: 100vh;
   position: fixed;
   background-color: #fff;
   z-index: 2;
+  left: -200%;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.hamburger__active {
+  left: 0;
+  visibility: visible;
+}
+
+.close__btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  cursor: pointer;
+}
+.close__btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hamburger__header {
@@ -15,14 +37,16 @@
 }
 
 .hamburger__logo {
-  width: 45px;
-  padding-left: 5px;
+  width: 70px;
+  padding-left: 0px;
 }
 
 .hamburger__login {
-  width: 70px;
-  height: 30px;
-  font-size: 14px;
+  width: 100px;
+  height: 35px;
+  font-size: 15px;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .hamburger__menu-items {
@@ -40,7 +64,6 @@
 
 .hamburger__menu-item {
   position: relative;
-  padding-left: 10px;
 }
 
 .hamburger__menu-item::before {
@@ -103,4 +126,24 @@
 .hamburger__social-link img {
   width: 100%;
   height: 100%;
+}
+
+.hamburger__toggle {
+  position: fixed;
+  top: 10px;
+  left: 5px;
+  z-index: 5;
+  display: none;
+}
+
+.hamburger__toggle-line {
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  z-index: 10;
+  margin-top: 3px;
+}
+
+.hamburger__toggle-hide {
+  display: none;
 }

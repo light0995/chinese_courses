@@ -6,29 +6,7 @@
   );
 }
 
-.header__menu-items {
-  list-style-type: none;
-  display: flex;
-  /* max-width: 520px; */
-  justify-content: space-between;
-}
 
-.header__menu-item {
-    display: flex;
-    margin-right: 150px;
-
-    a {
-        color: #fff;
-        color: #000;
-        font-size: 22px;
-        text-decoration: none;
-    }
-}
-
-.header__menu-item a:hover {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-}
 
 .promo__description {
   &-text {
