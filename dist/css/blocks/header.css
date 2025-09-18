@@ -15,6 +15,7 @@
 .header__menu-item {
   display: flex;
   margin-right: 150px;
+  z-index: 5;
 }
 .header__menu-item a {
   color: #fff;
@@ -34,6 +35,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(to right, rgb(141, 112, 255) 90%, rgb(141, 112, 255));
 }
 
 .header__login {

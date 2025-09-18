@@ -36,7 +36,12 @@ html {
   }
 }
 
+
+
+
+
 @import "./mixin.scss/mixin.scss";
+@import './blocks/social.scss';
 @import "./blocks/promo.scss";
 @import "./blocks/header.scss";
 @import "./blocks/registration.scss";
@@ -44,7 +49,8 @@ html {
 @import "./blocks//productCards.scss";
 @import "./blocks/courseDetails.scss";
 @import "./blocks/hamburger.scss";
-
+@import './blocks/footer.scss';
+@import './blocks/social.scss';
 
 
 

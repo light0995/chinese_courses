@@ -29,6 +29,12 @@
   }
 }
 
+
+.close__btn:active {
+  width: 35px;
+  height: 35px;
+}
+
 .hamburger__header {
   display: flex;
   width: 100%;
@@ -135,7 +141,8 @@
   top: 10px;
   left: 5px;
   z-index: 5;
-  display: none;
+  visibility: hidden;
+  transition: all 0.5s;
 }
 
 .hamburger__toggle-line {
@@ -147,5 +154,6 @@
 }
 
 .hamburger__toggle-hide {
-  display: none;
+  left: -200%;
+  visibility: hidden;
 }

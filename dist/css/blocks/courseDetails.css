@@ -38,9 +38,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.course-details-title-wrapper {
   position: relative;
 }
 
@@ -56,8 +53,9 @@
   width: 100px;
   height: 100px;
   position: absolute;
-  right: 20%;
-  top: -30px;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Описание курса */
@@ -65,7 +63,6 @@
   font-size: 24px;
   line-height: 1.6;
   margin-bottom: 30px;
-  text-align: center;
 }
 
 /* Оформление списка целей */
@@ -119,18 +116,37 @@
 }
 
 /* Мобильная адаптация */
-@media (max-width: 768px) {
-  .course-details-title {
-    font-size: 28px;
+@media (max-width: 1280px) {
+  .course-details {
+    padding-top: 80px;
   }
-  .course-details-wrapper {
-    font-size: 18px;
-    line-height: 28px;
+  .course-details .container {
+    max-width: 720px;
+  }
+  .course-details-title-icon {
+    width: 70px;
+    height: 70px;
+  }
+  .course-details-title {
+    font-size: 35px;
+    margin-bottom: 20px;
   }
   .course-details-subtitle {
-    font-size: 20px;
+    font-size: 28px;
+  }
+  .course-details-list {
+    margin-top: 10px;
   }
   .course-details-list-item {
-    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+  .course-details-list-item::before {
+    margin-top: 2px;
+    left: -20px;
+  }
+  .course-details-purpose,
+  .course-details-audience {
+    margin-bottom: 40px;
   }
 }

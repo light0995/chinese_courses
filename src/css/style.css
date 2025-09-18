@@ -35,6 +35,21 @@ html {
   display: block;
 }
 
+.social {
+  width: 50px;
+  height: 80px;
+}
+.social img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.social__item img {
+  width: 100%;
+  height: 100%;
+}
+
 .promo {
   background: linear-gradient(to right, rgb(141, 112, 255) 90%, rgb(141, 112, 255));
 }
@@ -129,6 +144,7 @@ html {
 .header__menu-item {
   display: flex;
   margin-right: 150px;
+  z-index: 5;
 }
 .header__menu-item a {
   color: #fff;
@@ -148,6 +164,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(to right, rgb(141, 112, 255) 90%, rgb(141, 112, 255));
 }
 
 .header__login {
@@ -180,7 +197,7 @@ html {
   background-color: #206e9a;
   padding: 20px 0;
   box-shadow: inset 15px -20px 40px rgba(0, 0, 0, 0.5);
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 50%;
   left: 50%;
@@ -297,16 +314,9 @@ html {
   height: 400px;
 }
 .sidepanel__social {
-  width: 50px;
-  height: 80px;
   display: grid;
   grid-template-rows: 30px 30px;
   row-gap: 20px;
-}
-.sidepanel__social img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 .sidepanel__line {
   width: 200px;
@@ -433,9 +443,6 @@ html {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.course-details-title-wrapper {
   position: relative;
 }
 
@@ -451,8 +458,9 @@ html {
   width: 100px;
   height: 100px;
   position: absolute;
-  right: 20%;
-  top: -30px;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Описание курса */
@@ -460,7 +468,6 @@ html {
   font-size: 24px;
   line-height: 1.6;
   margin-bottom: 30px;
-  text-align: center;
 }
 
 /* Оформление списка целей */
@@ -514,19 +521,38 @@ html {
 }
 
 /* Мобильная адаптация */
-@media (max-width: 768px) {
-  .course-details-title {
-    font-size: 28px;
+@media (max-width: 1280px) {
+  .course-details {
+    padding-top: 80px;
   }
-  .course-details-wrapper {
-    font-size: 18px;
-    line-height: 28px;
+  .course-details .container {
+    max-width: 720px;
+  }
+  .course-details-title-icon {
+    width: 70px;
+    height: 70px;
+  }
+  .course-details-title {
+    font-size: 35px;
+    margin-bottom: 20px;
   }
   .course-details-subtitle {
-    font-size: 20px;
+    font-size: 28px;
+  }
+  .course-details-list {
+    margin-top: 10px;
   }
   .course-details-list-item {
-    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+  .course-details-list-item::before {
+    margin-top: 2px;
+    left: -20px;
+  }
+  .course-details-purpose,
+  .course-details-audience {
+    margin-bottom: 40px;
   }
 }
 .hamburger {
@@ -558,6 +584,11 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.close__btn:active {
+  width: 35px;
+  height: 35px;
 }
 
 .hamburger__header {
@@ -664,7 +695,8 @@ html {
   top: 10px;
   left: 5px;
   z-index: 5;
-  display: none;
+  visibility: hidden;
+  transition: all 0.5s;
 }
 
 .hamburger__toggle-line {
@@ -676,7 +708,37 @@ html {
 }
 
 .hamburger__toggle-hide {
-  display: none;
+  left: -200%;
+  visibility: hidden;
+}
+
+.footer {
+  background: linear-gradient(to right, rgb(141, 112, 255) 90%, rgb(141, 112, 255));
+}
+
+.footer__social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__social-item {
+  width: 20px;
+  height: 20px;
+}
+
+.social {
+  width: 50px;
+  height: 80px;
+}
+.social img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.social__item img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1280px) {
@@ -962,9 +1024,31 @@ html {
     margin-top: 15px;
   }
   .hamburger__toggle {
-    display: block;
+    visibility: visible;
   }
-  .hamburger__toggle-hide {
-    display: none;
+  .modal {
+    padding: 30px 0;
+  }
+  .modal__login-title {
+    font-size: 22px;
+  }
+  .modal__register-title {
+    font-size: 22px;
+  }
+  .modal__form {
+    margin-top: 15px;
+    width: 80%;
+    row-gap: 10px;
+  }
+  .modal__form input::placeholder {
+    font-size: 15px;
+  }
+  .modal__form-registration {
+    grid-template-rows: repeat(5, 45px);
+    row-gap: 7px;
+  }
+  .modal__btn-registration {
+    height: 40px;
+    font-size: 11px;
   }
 }
