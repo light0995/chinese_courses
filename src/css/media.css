@@ -77,6 +77,9 @@
     height: 45px;
     margin-top: 15px;
   }
+  .footer__copyright {
+    font-size: 16px;
+  }
 }
 @media (max-width: 992px) {
   .header__menu-item {
@@ -307,5 +310,19 @@
   .modal__btn-registration {
     height: 40px;
     font-size: 11px;
+  }
+  .footer__copyright {
+    font-size: 10px;
+  }
+  .footer__social {
+    width: 50px;
+    height: 50px;
+  }
+  .footer__social-item {
+    width: 18px;
+    height: 18px;
+  }
+  .footer__logo {
+    width: 50px;
   }
 }

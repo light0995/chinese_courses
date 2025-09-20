@@ -411,6 +411,7 @@ html {
   background: linear-gradient(to right, rgb(141, 112, 255) 90%, rgb(141, 112, 255));
   color: #fff;
   padding: 40px 0;
+  padding-top: 120px;
   position: relative;
 }
 
@@ -458,7 +459,7 @@ html {
   width: 100px;
   height: 100px;
   position: absolute;
-  top: -80px;
+  top: -110px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -719,11 +720,22 @@ html {
 .footer__social {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer__social-item {
   width: 20px;
   height: 20px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-size: 20px;
 }
 
 .social {
@@ -819,6 +831,9 @@ html {
     font-size: 20px;
     height: 45px;
     margin-top: 15px;
+  }
+  .footer__copyright {
+    font-size: 16px;
   }
 }
 @media (max-width: 992px) {
@@ -1050,5 +1065,19 @@ html {
   .modal__btn-registration {
     height: 40px;
     font-size: 11px;
+  }
+  .footer__copyright {
+    font-size: 10px;
+  }
+  .footer__social {
+    width: 50px;
+    height: 50px;
+  }
+  .footer__social-item {
+    width: 18px;
+    height: 18px;
+  }
+  .footer__logo {
+    width: 50px;
   }
 }

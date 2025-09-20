@@ -5,9 +5,20 @@
 .footer__social {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer__social-item {
   width: 20px;
   height: 20px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__copyright {
+  font-size: 20px;
 }
